@@ -1,0 +1,9 @@
+Epoch    0 | Total System Error: 0.533438
+Epoch  200 | Total System Error: 0.356318
+Epoch  369 | Total System Error: 0.004959
+
+Final Network Evaluation on full XOR dataset:
+Input: [0.0, 0.0] | Target: [0.0] | Predicted: [0.0416]
+Input: [0.0, 1.0] | Target: [1.0] | Predicted: [0.953]
+Input: [1.0, 0.0] | Target: [1.0] | Predicted: [0.953]
+Input: [1.0, 1.0] | Target: [0.0] | Predicted: [0.0607]
