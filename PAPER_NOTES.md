@@ -1,7 +1,7 @@
 # PAPER_NOTES.md
 
 ## Research Paper: Learning representations by back-propagating errors (1986)
-**Done by:** Shubham patil
+**Done by:** Shubham Patil 
 **Task:** Replicating the classic XOR experiment  
 
 ---
@@ -30,7 +30,11 @@ Instead of using PyTorch's automatic shortcuts like `loss.backward()`, I am codi
 1. **Forward Pass:** I pass the inputs through the first weights, add the bias, and use the sigmoid function: $y = 1 / (1 + e^{-x})$. Then I do the same from hidden to output.
 2. **Output Delta:** I calculate the error at the end: $\delta_{\text{output}} = (t - a_2) \cdot a_2(1 - a_2)$.
 3. **Hidden Delta:** I pass that error backward through the weights to find the hidden layer error signal.
-4. **Weight & Bias Updates:** I update all weights AND biases using the momentum formula: $\Delta W(t+1) = \text{learning\_rate} \cdot (\text{inputs} \cdot \delta) + \alpha \cdot \Delta W(t)$. My code tracks this velocity over time just like the paper.
+4. **Weight & Bias Updates:** I update all weights AND biases using the momentum formula:
+
+$$\Delta W(t+1) = \eta \cdot (\text{inputs}^T \cdot \delta) + \alpha \cdot \Delta W(t)$$
+
+(Where $\eta$ is the learning rate, and $\alpha$ is the momentum constant). My code tracks this velocity over time just like the paper.
 
 ---
 
